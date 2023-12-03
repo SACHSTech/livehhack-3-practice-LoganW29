@@ -28,11 +28,21 @@ public class Main {
         System.out.println(old35(10)); 
         System.out.println(old35(9)); 
 
+        // add Test 4
         System.out.println("add Test for teenSum");
         System.out.println(teenSum(4, 3)); 
         System.out.println(teenSum(10, 13)); 
        
+        // add Test 5 
+        System.out.println("add Test for doubleChar");
+        System.out.println(doubleChar("hello")); 
+        System.out.println(doubleChar("BBAA")); 
 
+         // add Test 6 
+        System.out.println("add Test for countCode");
+        System.out.println(countCode("codecopecoaehsnc")); 
+        System.out.println(countCode("BBAA")); 
+        System.out.println(countCode("BBAcope")); 
 
     }
 
@@ -106,7 +116,41 @@ public class Main {
         }
     }
 
+    /**
+     * Doubles each character in the string 
+     * @param str the string 
+     * @return returns the string with doubling each character 
+     */
+    public static String doubleChar(String str) {
+       
+        String strResult = ""; 
+        for (int i = 0; i < str.length(); i++){
+            strResult += str.charAt(i) + "" + str.charAt(i);
+        }
+        return strResult; 
+  
+    }
 
+    /**
+     * Counts the amount of times the word "code" is inside a string, but 'd' can be replaced by any letter. 
+     * @param str
+     * @return the amount "co*e" is inside a string 
+     */
+    public static int countCode(String str) {
+
+        int intResult = 0;
+        for (int i = 0; i < str.length() - 3; i++){
+
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o' && str.charAt(i + 3) == 'e'){
+                intResult ++;
+            }
+            else {
+                intResult += 0;
+            }
+        }
+        return intResult; 
+    }
+    
     
 } 
 
