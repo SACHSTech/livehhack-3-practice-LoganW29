@@ -44,6 +44,12 @@ public class Main {
         System.out.println(countCode("BBAA")); 
         System.out.println(countCode("BBAcope")); 
 
+        // add Test 7
+        System.out.println("add Test for bobThere");
+        System.out.println(bobThere("bobbbobbbb")); 
+        System.out.println(bobThere("b9b")); 
+        System.out.println(bobThere("bac")); 
+
     }
 
     /**
@@ -151,7 +157,38 @@ public class Main {
         return intResult; 
     }
     
+   
+   
+    public static boolean bobThere(String str) {
+
+        for (int i = 0; i < str.length() - 2; i++){
+
+            if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b'){
+                return true;
+            }
+        }
+        return false; 
+
+    }
+   
     
-} 
+    public static String repeatEnd(String str, int n) {
+        
+        int length = str.length();
+        String result = "";
+    
+        for (int i = 0; i < n; i++) {
+            result += str.substring(length - n);
+        }
+    
+        return result;
+    }
+    
+        
+}
+
+    
+
+
 
 
